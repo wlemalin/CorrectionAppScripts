@@ -16,7 +16,10 @@ Pour utiliser ce script, suivez les étapes ci-dessous :
    ```bash
    git clone https://github.com/MateoDib/CorrectionAppScripts.git
    ```
-   Pour vérifier que les documents sont présents (si la sortie n'est pas vide c'est que tout va bien) :
+   
+2. **Vérifier le téléchargement des documents**
+
+   Pour vérifier que les documents sont présents (si la sortie n'est pas vide c'est que tout va bien) exécutez les commandes suivantes dans le terminal :
    ```bash
    cd CorrectionAppScripts
    ```
@@ -24,7 +27,10 @@ Pour utiliser ce script, suivez les étapes ci-dessous :
    ```bash
    ls
    ```
-Tant que vous y êtes, récupérez le chemin vers le dossier en exécutant la commande suivante à la suite :
+
+3. **Copier le chemin d'accès au code**
+
+Tant que vous y êtes, récupérez le chemin vers le dossier en exécutant la commande suivante à la suite dans le terminal :
    ```bash
    pwd
    ```
@@ -36,13 +42,15 @@ Copiez ce chemin et ajoutez y "/Texte_correction.py" de manière à construire l
 Vous pouvez simplement le garder de coté, nous en aurons besoin par la suite.
 
 
-3. **Installer les dépendances dans le dossier du projet **
+4. **Installer les dépendances dans le dossier du projet **
 
    Toujours dans le terminal, exécutez la commande suivante :
    ```bash
    pip install -r requirements.txt
    ```
 Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer la configuration.
+
+
 
 ## Configurer la clé API
 
