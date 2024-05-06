@@ -152,3 +152,17 @@ Pour savoir quoi mettre à la place de /Users/nom_user/opt/anaconda3/bin/python3
 
 Voilà, vous pouvez maintenant copier un texte, cliquer sur votre raccourci, et coller le texte corrigé n'importe où.
 
+## Mise à jour 
+
+Si vous avez déjà effectué toutes ces étapes auparavant mais que vous souhaitez simplement avoir la nouvelle versionne du repository, exécutez les commandes suivantes dans le terminal :
+   ```bash
+   # Veillez à remplacer le chemin par le votre
+   # Pour rappel vous pouvez connaître ce chemin simplement en exécutant "cd CorrectionAppScripts"
+   cd /Users/nom_user/CorrectionAppScripts
+   ```
+   Puis :
+   ```bash
+   git pull origin main
+   ```
+
+Voilà ! La mise-à-jour est faite.
