@@ -42,7 +42,7 @@ Copiez ce chemin et ajoutez y "/Texte_correction.py" de manière à construire l
 Vous pouvez simplement le garder de coté, nous en aurons besoin par la suite.
 
 
-4. **Installer les dépendances dans le dossier du projet **
+4. **Installer les dépendances dans le dossier du projet**
 
    Toujours dans le terminal, exécutez la commande suivante :
    ```bash
@@ -56,15 +56,22 @@ Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer
 
    Configurez votre clé API en créant la variable d'environnement REPLICATE_API_TOKEN. Pour cela, il va falloir modifier votre fichier .bashrc ou .zshrc. La modification est ainsi "permanente", c'est-à-dire que vous aurez toujours accès à cette variable, jusqu'à modification/suppression.
 
-1. Ouvrir le terminal sur votre machine (Command + Espace, écrivez "Terminal" dans la barre de recherche, puis taper sur Entrer).
+1. **Ouvrir le terminal sur votre machine**
 
-2. Éditer le fichier .bashrc pour les utilisateurs de Bash ou .zshrc pour les utilisateurs de Zsh qui se trouve dans votre répertoire personnel en utilisant la commande suivante dans le terminal :
+   Appuyez sur Command + Espace, puis écrivez "Terminal" dans la barre de recherche. Et enfin tapez sur Entrer.
 
-   Pour savoir si vous êtes en Bash ou Zsh :
+
+Vous allez maintenant devoir éditer le fichier .bashrc pour les utilisateurs de Bash ou .zshrc pour les utilisateurs de Zsh. Pour réaliser correctement cette tâche suivez les étapes suivantes :
+
+2. **Connaître l'interpréteur de commandes**
+
+   Pour savoir si vous êtes en Bash ou Zsh exécutez la commande suivante dans le terminal :
     ```bash
    echo $SHELL
    ```
-    Puis en fonction de la sortie :
+
+3. **Ouverture du fichier .bashrc ou .zshrc**
+    En fonction de la sortie précédent, exécuté :
    ```bash
    # Pour les utilsateurs de Bash (.bashrc)
    nano ~/.bashrc
@@ -74,14 +81,19 @@ Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer
    nano ~/.zshrc
    ```
 
-3. Ajouter la ligne suivante à la fin du fichier (la configuration est étonante mais faites-vous confiance, la fin du fichier c'est juste en bas, vous avez simplement à copier la liegne suivante):
+4. **Définir la clé API**
+
+   Ajouter la ligne suivante à la fin du fichier (la configuration est étonante mais faites-vous confiance, la fin du fichier c'est juste en bas, vous avez simplement à copier la ligne suivante):
    ```bash
    # Assurez-vous de remplacer 'votre_clé_api' par votre clé API de Replicate, tout en gardant les guillements comme tels.
    export REPLICATE_API_TOKEN='votre_clé_api'
    ```
-5. Sauvegarder le fichier et quitter l'éditeur en appuyant sur Ctrl+O, puis Enter, et quitter avec Ctrl+X.
+   
+5. **Sauvegarder le fichier et quitter l'éditeur**
 
-6. Appliquer les modifications en rechargeant le fichier .bashrc avec la commande:
+Sauvegardez le fichier et quittez l'éditeur en appuyant sur Control+O (c'est un O comment dans ouvrir), puis Enter, et quitter avec Ctrl+X.
+
+7. Appliquer les modifications en rechargeant le fichier .bashrc avec la commande:
    ```bash
    # Pour les utilisateurs de Bash (.bashrc)
    source ~/.bashrc
@@ -91,7 +103,7 @@ Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer
    # Pour les utilisateurs de Zsh (.zshrc)
    source ~/.zshrc
    ```
-7. Vérifiez que la variable d'environnement s'est bien enregistrée en fermant le terminal puis en l'ouvrant de nouveau pour exécuter la commande suivante :
+8. Vérifiez que la variable d'environnement s'est bien enregistrée en fermant le terminal puis en l'ouvrant de nouveau pour exécuter la commande suivante :
    ```bash
    echo $REPLICATE_API_TOKEN
    ```
