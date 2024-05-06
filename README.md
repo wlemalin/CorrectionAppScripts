@@ -1,4 +1,4 @@
-# Correcteur (système Unix ou Linux y compris macOS)
+# Correcteur de texte Llama3 (système Unix ou Linux y compris macOS)
 
 Ce projet contient un script Python qui utilise l'API de Replicate pour corriger les fautes de grammaire, d'orthographe et de syntaxe du texte actuellement copié dans le presse-papiers de l'utilisateur.
 
