@@ -12,15 +12,31 @@ Pour utiliser ce script, suivez les étapes ci-dessous :
 
 1. **Cloner le dépôt**
    
-   Ouvrez un terminal et exécutez la commande suivante :
+   Ouvrez un terminal et exécutez la commande suivante pour téléchager les fichiers nécessaires :
    ```bash
    git clone https://github.com/MateoDib/CorrectionAppScripts.git
    ```
+   Pour vérifier que les documents sont présents (si la sortie n'est pas vide c'est que tout va bien) :
    ```bash
    cd CorrectionAppScripts
    ```
+   Puis :
+   ```bash
+   ls
+   ```
+Tant que vous y êtes, récupérez le chemin vers le dossier en exécutant la commande suivante à la suite :
+   ```bash
+   pwd
+   ```
 
-2. **Installer les dépendances dans le dossier du projet **
+Copiez ce chemin et ajoutez y "/Texte_correction.py" de manière à construire le chemin au code python qui nous sera utile plus tard. Cela devrait ressembler à cela :
+   ```bash
+   /Users/nom_user/CorrectionAppScripts/Texte_correction.py
+   ```
+Vous pouvez simplement le garder de coté, nous en aurons besoin par la suite.
+
+
+3. **Installer les dépendances dans le dossier du projet **
 
    Toujours dans le terminal, exécutez la commande suivante :
    ```bash
@@ -99,7 +115,7 @@ Pour vous permettre d'exécuter facilement le script Python et donc d'avoir un r
 
 5. Entrez la commande Python pour exécuter votre script, en remplaçant les chemins de l'environnement python et du script par ceux adaptés à vos chemins. La commande devrait ressembler à ceci :
    ```bash
-   /Users/nom_user/opt/anaconda3/bin/python3 /Users/nom_user/Desktop/Automatisation/Texte_correction.py
+   /Users/nom_user/opt/anaconda3/bin/python3 /Users/nom_user/CorrectionAppScripts/Texte_correction.py
    ```
 
 Pour savoir quoi mettre à la place de /Users/nom_user/opt/anaconda3/bin/python3, lancez la commande suivante sur votre terminal :
