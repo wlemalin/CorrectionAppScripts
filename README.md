@@ -52,7 +52,7 @@ Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer
 
 3. Ajouter la ligne suivante à la fin du fichier (la configuration est étonante mais faites-vous confiance, la fin du fichier c'est juste en bas, vous avez simplement à copier la liegne suivante):
    ```bash
-   # Assurez-vous de remplacer 'votre_clé_api' par votre clé API de Replicate.
+   # Assurez-vous de remplacer 'votre_clé_api' par votre clé API de Replicate, tout en gardant les guillements comme tels.
    export REPLICATE_API_TOKEN='votre_clé_api'
    ```
 5. Sauvegarder le fichier et quitter l'éditeur en appuyant sur Ctrl+O, puis Enter, et quitter avec Ctrl+X.
@@ -67,6 +67,11 @@ Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer
    # Pour les utilisateurs de Zsh (.zshrc)
    source ~/.zshrc
    ```
+7. Vérifiez que la variable d'environnement s'est bien enregistrée en fermant le terminal puis en l'ouvrant de nouveau pour exécuter la commande suivante :
+   ```bash
+   echo $REPLICATE_API_TOKEN
+   ```
+Si la valeur de votre clé apparait, c'est que la variable d'environnement s'est bien enregistrée.
 
 En ajoutant cette ligne à votre fichier .bashrc ou .zshrc, vous configurez votre clé API pour être automatiquement disponible dans toutes les nouvelles sessions de terminal, ce qui facilite l'utilisation de scripts et d'outils nécessitant cette clé sans avoir à la configurer à chaque fois.
 
