@@ -151,6 +151,15 @@ Pour vous permettre d'exécuter facilement le script Python et donc d'avoir un r
    
    Vous pouvez l'épingler à la barre des menus afin de cliquer dessus lorsque vous souhaitez l'utiliser.
 
+7. **Erreur de reconnaissance de la clé API?**
+
+   Si vous êtes sur que votre clé fonctionne, tentez de modifier le script du shell dans le raccourci que vous avez créé comme suit :
+   ```bash
+   REPLICATE_API_TOKEN='votre_clé_api' /Users/mateo/opt/anaconda3/bin/python3 /Users/mateo/CorrectionAppScripts/Texte_correction.py
+   ```
+
+   Cela devrait maintenant fonctionne correctement.
+
 
 Voilà, vous pouvez maintenant copier un texte, cliquer sur votre raccourci, et coller le texte corrigé n'importe où.
 
