@@ -8,7 +8,7 @@ Avant de commencer, assurez-vous d'avoir Python installé sur votre machine. Ce 
 
 ## Installation
 
-Pour utiliser ce script, suivez les étapes ci-dessous :
+Pour installer le code python et les blibliothèqyes nécessaires, suivez les étapes ci-dessous :
 
 1. **Cloner le dépôt**
    
@@ -29,17 +29,16 @@ Pour utiliser ce script, suivez les étapes ci-dessous :
    ```
 
 3. **Copier le chemin d'accès au code**
-
-Tant que vous y êtes, récupérez le chemin vers le dossier en exécutant la commande suivante à la suite dans le terminal :
+   Tant que vous y êtes, récupérez le chemin vers le dossier en exécutant la commande suivante à la suite dans le terminal :
    ```bash
    pwd
    ```
 
-Copiez ce chemin et ajoutez y "/Texte_correction.py" de manière à construire le chemin au code python qui nous sera utile plus tard. Cela devrait ressembler à cela :
+   Copiez ce chemin et ajoutez y "/Texte_correction.py" de manière à construire le chemin au code python qui nous sera utile plus tard. Cela devrait ressembler à cela :
    ```bash
    /Users/nom_user/CorrectionAppScripts/Texte_correction.py
    ```
-Vous pouvez simplement le garder de coté, nous en aurons besoin par la suite.
+   Vous pouvez simplement le garder de coté, nous en aurons besoin par la suite.
 
 
 4. **Installer les dépendances dans le dossier du projet**
@@ -48,6 +47,8 @@ Vous pouvez simplement le garder de coté, nous en aurons besoin par la suite.
    ```bash
    pip install -r requirements.txt
    ```
+
+
 Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer la configuration.
 
 
@@ -93,7 +94,9 @@ Vous allez maintenant devoir éditer le fichier .bashrc pour les utilisateurs de
 
 Sauvegardez le fichier et quittez l'éditeur en appuyant sur Control+O (c'est un O comment dans ouvrir), puis Enter, et quitter avec Ctrl+X.
 
-7. Appliquer les modifications en rechargeant le fichier .bashrc avec la commande:
+6. **Appliquer les modifications**
+
+   Pour être sûr que les  modifications ont bien été prises en compte exécutez les commandes suivantes sur le terminal toujours :
    ```bash
    # Pour les utilisateurs de Bash (.bashrc)
    source ~/.bashrc
@@ -103,7 +106,9 @@ Sauvegardez le fichier et quittez l'éditeur en appuyant sur Control+O (c'est un
    # Pour les utilisateurs de Zsh (.zshrc)
    source ~/.zshrc
    ```
-8. Vérifiez que la variable d'environnement s'est bien enregistrée en fermant le terminal puis en l'ouvrant de nouveau pour exécuter la commande suivante :
+7. **Vérifier la création de la variable d'environnement**
+   
+   Vérifiez que la variable d'environnement s'est bien enregistrée en fermant le terminal puis en l'ouvrant de nouveau pour exécuter la commande suivante
    ```bash
    echo $REPLICATE_API_TOKEN
    ```
@@ -112,33 +117,28 @@ Si la valeur de votre clé apparait, c'est que la variable d'environnement s'est
 En ajoutant cette ligne à votre fichier .bashrc ou .zshrc, vous configurez votre clé API pour être automatiquement disponible dans toutes les nouvelles sessions de terminal, ce qui facilite l'utilisation de scripts et d'outils nécessitant cette clé sans avoir à la configurer à chaque fois.
 
 
-## Spécification de l'emplacement du code Python
-
-1. Téléchargez le projet Git sur votre ordinateur (si ce n'est pas déjà fait).
-
-2. Créez un dossier nommé `Scripts` à la racine du projet Git.
-
-3. Placez le fichier Python `Texte_correction.py` dans le dossier `Scripts`.
 
 
 ## Créez un raccourci vers le script Python : 
 
 Pour vous permettre d'exécuter facilement le script Python et donc d'avoir un raccourci, vous pouvez créer un raccourci à partir de l'application Raccourcis de Mac (disponible par défaut normalement). Voici les étapes à suivre pour cela :
 
-1. Ouvrez l'application Raccourcis sur votre Mac.
+1. **Ouvrez l'application Raccourcis sur votre Mac.**
 
-2. Créez un nouveau raccourci en cliquant sur le bouton "+", en haut à droite.
+2. **Créez un nouveau raccourci en cliquant sur le bouton "+", en haut à droite.**
 
-3. Dans la barre de recherche à droite, tapez "Shell" et l'option "Exécuter un script Shell" apparaîtra. Sélectionnez-la.
+3. **Dans la barre de recherche à droite, tapez "Shell" et l'option "Exécuter un script Shell" apparaîtra. Sélectionnez-la.**
 
-4. Dans la zone de texte du script Shell, supprimez le texte apparant s'il y en a un.
+4. **Dans la zone de texte du script Shell, supprimez le texte apparant s'il y en a un.**
 
-5. Entrez la commande Python pour exécuter votre script, en remplaçant les chemins de l'environnement python et du script par ceux adaptés à vos chemins. La commande devrait ressembler à ceci :
+5. **Entrez la commande Python pour exécuter votre script dans le script Shell**
+   
+   En remplaçant les chemins de l'environnement python et du script par ceux adaptés à vos chemins, a commande devrait ressembler à ceci :
    ```bash
    /Users/nom_user/opt/anaconda3/bin/python3 /Users/nom_user/CorrectionAppScripts/Texte_correction.py
    ```
 
-Pour savoir quoi mettre à la place de /Users/nom_user/opt/anaconda3/bin/python3, lancez la commande suivante sur votre terminal :
+   Pour savoir quoi mettre à la place de /Users/nom_user/opt/anaconda3/bin/python3, lancez la commande   suivante sur votre terminal :
    ```bash
    which python3
    ```
@@ -147,7 +147,9 @@ Pour savoir quoi mettre à la place de /Users/nom_user/opt/anaconda3/bin/python3
    which python
    ```
 
-6. Donnez un nom à votre raccourci et enregistrez-le. Vous pouvez l'épingler à la barre des menus afin de cliquer dessus lorsque vous souhaitez l'utiliser.
+6. **Donnez un nom à votre raccourci et enregistrez-le.**
+   
+   Vous pouvez l'épingler à la barre des menus afin de cliquer dessus lorsque vous souhaitez l'utiliser.
 
 
 Voilà, vous pouvez maintenant copier un texte, cliquer sur votre raccourci, et coller le texte corrigé n'importe où.
