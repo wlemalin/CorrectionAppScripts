@@ -17,7 +17,7 @@ Pour utiliser ce script, suivez les étapes ci-dessous :
    git clone https://github.com/MateoDib/CorrectionAppScripts.git
    ```
    ```bash
-   cd votrerepertoire
+   cd CorrectionAppScripts
    ```
 
 2. **Installer les dépendances dans le dossier du projet **
