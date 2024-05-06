@@ -14,7 +14,7 @@ Pour utiliser ce script, suivez les étapes ci-dessous :
    
    Ouvrez un terminal et exécutez la commande suivante :
    ```bash
-   git clone https://github.com/votreusername/votrerepertoire.git
+   git clone https://github.com/MateoDib/CorrectionAppScripts.git
    ```
    ```bash
    cd votrerepertoire
@@ -25,52 +25,50 @@ Pour utiliser ce script, suivez les étapes ci-dessous :
    Toujours dans le terminal, exécutez la commande suivante :
    ```bash
    pip install -r requirements.txt
+   ```
+Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer la configuration.
 
-3. **Configurer la clé API**
+## Configurer la clé API
 
-   Configurez votre clé API en créant la variable d'environnement REPLICATE_API_TOKEN. Pour cela, il va falloir ajouter la ligne export REPLICATE_API_TOKEN='votre_clé_api' à un fichier .bashrc ou .zshrc. La modification est ainsi "permanente", c'est-à-dire que vous aurez toujours accès à cette variable, jusqu'à modification/suppression.
+   Configurez votre clé API en créant la variable d'environnement REPLICATE_API_TOKEN. Pour cela, il va falloir modifier votre fichier .bashrc ou .zshrc. La modification est ainsi "permanente", c'est-à-dire que vous aurez toujours accès à cette variable, jusqu'à modification/suppression.
 
-1. Ouvrir le terminal sur votre machine.
-2. Éditer le fichier .bashrc qui se trouve dans votre répertoire personnel en utilisant la commande suivante dans le terminal :
+1. Ouvrir le terminal sur votre machine (Command + Espace, écrivez "Terminal" dans la barre de recherche, puis taper sur Entrer).
+
+2. Éditer le fichier .bashrc pour les utilisateurs de Bash ou .zshrc pour les utilisateurs de Zsh qui se trouve dans votre répertoire personnel en utilisant la commande suivante dans le terminal :
+
+   Pour savoir si vous êtes en Bash ou Zsh :
+    ```bash
+   echo $SHELL
+   ```
+    Puis en fonction de la sortie :
    ```bash
-   # Pour les utilsateurs de Bash
+   # Pour les utilsateurs de Bash (.bashrc)
    nano ~/.bashrc
    ```
    ```bash
-   # Pour les utilsateurs de Zsh
+    # Pour les utilisateurs de Zsh (.zshrc)
    nano ~/.zshrc
    ```
 
-3. Ajouter la ligne suivante à la fin du fichier:
+3. Ajouter la ligne suivante à la fin du fichier (la configuration est étonante mais faites-vous confiance, la fin du fichier c'est juste en bas, vous avez simplement à copier la liegne suivante):
    ```bash
    export REPLICATE_API_TOKEN='votre_clé_api'
    # Assurez-vous de remplacer 'votre_clé_api' par votre clé API réelle.
-4. Sauvegarder le fichier et quitter l'éditeur en appuyant sur Ctrl+O, puis Enter, et quitter avec Ctrl+X.
-5. Appliquer les modifications en rechargeant le fichier .bashrc avec la commande:
-bash
-Copy code
-source ~/.bashrc
-Pour les utilisateurs de Zsh (.zshrc)
-Ouvrir le terminal.
-Éditer le fichier .zshrc de la même manière que pour .bashrc. Si vous utilisez nano, la commande sera:
-bash
-Copy code
-nano ~/.zshrc
-Ajouter la ligne suivante à la fin du fichier:
-bash
-Copy code
-export REPLICATE_API_TOKEN='votre_clé_api'
-N'oubliez pas de remplacer 'votre_clé_api' par la clé API que vous avez.
-Sauvegarder et quitter. Avec nano, sauvegardez avec Ctrl+O et Enter, puis quittez avec Ctrl+X.
-Recharger le fichier .zshrc pour que les modifications prennent effet immédiatement:
-bash
-Copy code
-source ~/.zshrc
+   ```
+5. Sauvegarder le fichier et quitter l'éditeur en appuyant sur Ctrl+O, puis Enter, et quitter avec Ctrl+X.
+
+6. Appliquer les modifications en rechargeant le fichier .bashrc avec la commande:
+   ```bash
+   source ~/.bashrc
+    # Pour les utilisateurs de Bash (.bashrc)
+   ```
+   
+   ```bash
+   source ~/.zshrc
+   # Pour les utilisateurs de Zsh (.zshrc)
+   ```
+
 En ajoutant cette ligne à votre fichier .bashrc ou .zshrc, vous configurez votre clé API pour être automatiquement disponible dans toutes les nouvelles sessions de terminal, ce qui facilite l'utilisation de scripts et d'outils nécessitant cette clé sans avoir à la configurer à chaque fois.
-
-
-
-
 
 
 
