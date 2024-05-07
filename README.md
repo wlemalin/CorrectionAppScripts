@@ -1,6 +1,6 @@
 # Correcteur de texte Llama3 (système Unix ou Linux y compris macOS)
 
-Ce projet contient un script Python qui utilise l'API de Replicate pour corriger les fautes de grammaire, d'orthographe et de syntaxe du texte actuellement copié dans le presse-papiers de l'utilisateur.
+Ce projet contient un script Python qui utilise llama-3 via l'API de Replicate pour écrire du code R sur la base d'instructions copiées dans le presse-papiers de l'utilisateur. Plus précisément ce fork résout un problème dû à la gestion du presse-papier de Linux qui vide le presse-papier dès la fin de l'exécution du raccourci lorsque pyperclip est utilisé. 
 
 ## Prérequis
 
@@ -14,14 +14,14 @@ Pour installer le code python et les blibliothèqyes nécessaires, suivez les é
    
    Ouvrez un terminal et exécutez la commande suivante pour téléchager les fichiers nécessaires :
    ```bash
-   git clone https://github.com/MateoDib/CorrectionAppScripts.git
+   git clone https://github.com/wlemalin/Linux_NLR.git
    ```
    
 2. **Vérifier le téléchargement des documents**
 
    Pour vérifier que les documents sont présents (si la sortie n'est pas vide c'est que tout va bien) exécutez les commandes suivantes dans le terminal :
    ```bash
-   cd CorrectionAppScripts
+   cd Linux_NLR
    ```
    Puis :
    ```bash
@@ -34,9 +34,9 @@ Pour installer le code python et les blibliothèqyes nécessaires, suivez les é
    pwd
    ```
 
-   Copiez ce chemin et ajoutez y "/te_correction.py" de manière à construire le chemin au code python qui nous sera utile plus tard. Cela devrait ressembler à cela :
+   Copiez ce chemin et ajoutez y "/Natural_language_to_R.py" de manière à construire le chemin au code python qui nous sera utile plus tard. Cela devrait ressembler à cela :
    ```bash
-   /Users/nom_user/CorrectionAppScripts/Natural_language_to_R.py
+   /Users/nom_user/Linux_NLR/Natural_language_to_R.py
    ```
    Vous pouvez simplement le garder de coté, nous en aurons besoin par la suite.
 
@@ -165,11 +165,11 @@ Voilà, vous pouvez maintenant copier un texte, cliquer sur votre raccourci, et 
 
 ## Mise à jour 
 
-Si vous avez déjà effectué toutes ces étapes auparavant mais que vous souhaitez simplement avoir la nouvelle versionne du repository, exécutez les commandes suivantes dans le terminal :
+Si vous avez déjà effectué toutes ces étapes auparavant mais que vous souhaitez simplement avoir la nouvelle version du repository, exécutez les commandes suivantes dans le terminal :
    ```bash
    # Veillez à remplacer le chemin par le votre
-   # Pour rappel vous pouvez connaître ce chemin simplement en exécutant "cd CorrectionAppScripts"
-   cd /Users/nom_user/CorrectionAppScripts
+   # Pour rappel vous pouvez connaître ce chemin simplement en exécutant "cd Linux_NLR"
+   cd /Users/nom_user/Linux_NLR
    ```
    Puis :
    ```bash
