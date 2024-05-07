@@ -1,6 +1,6 @@
 # Correcteur de texte Llama3 (système Unix ou Linux y compris macOS)
 
-Ce projet contient un script Python qui utilise llama-3 via l'API de Replicate pour écrire du code R sur la base d'instructions copiées dans le presse-papiers de l'utilisateur. Plus précisément ce fork résout un problème dû à la gestion du presse-papier de Linux qui vide le presse-papier dès la fin de l'exécution du raccourci lorsque pyperclip est utilisé. 
+Ce projet contient un script Python qui utilise llama-3 via l'API de Replicate pour écrire du code R sur la base d'instructions copiées dans le presse-papiers de l'utilisateur. Plus précisément ce fork résout un problème dû à la gestion du presse-papiers de Linux qui vide le presse-papier dès la fin de l'exécution du raccourci lorsque pyperclip est utilisé. 
 
 ## Prérequis
 
@@ -48,6 +48,23 @@ Pour installer le code python et les blibliothèqyes nécessaires, suivez les é
    pip install -r requirements.txt
    ```
 
+5. **Installer xclip pour la gestion du presse-papiers**
+
+   To install xclip on Ubuntu, Debian, and Linux Mint:
+   ```bash
+   sudo apt update
+   sudo apt install xclip
+   ```
+   
+   To install xclip on Fedora, CentOS, AlmaLinux, and Red Hat:
+   ```bash
+   sudo dnf install xclip
+   ```
+
+   To install xclip on Arch Linux and Manjaro:
+   ```bash
+   sudo pacman -S xclip
+   ```
 
 Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer la configuration.
 
