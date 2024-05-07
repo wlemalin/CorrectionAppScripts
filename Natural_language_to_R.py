@@ -2,6 +2,11 @@ import os
 import replicate
 import pyperclip
 import re  # Cette importation est conservée au cas où vous souhaiteriez utiliser des regex pour d'autres traitements
+import subprocess
+
+
+#If API-KEY problem, just paste yours below
+#os.environ['REPLICATE_API_TOKEN'] = ''
 
 # Assurez-vous que la variable d'environnement est définie
 REPLICATE_API_TOKEN = os.getenv('REPLICATE_API_TOKEN')
@@ -12,8 +17,10 @@ if REPLICATE_API_TOKEN is None:
 replicate.api_token = REPLICATE_API_TOKEN
 
 def get_clipboard():
-    """Récupère le texte du presse-papiers."""
-    return pyperclip.paste()
+    # Retrieve the current clipboard content using `xclip`
+    result = subprocess.run(['xclip', '-selection', 'clipboard', '-o'], stdout=subprocess.PIPE)
+    return result.stdout.decode('utf-8')
+
 
 def translate_to_r_with_replicate(text):
     """Envoie le texte à l'API Replicate pour traduction en code R."""
@@ -29,6 +36,11 @@ def translate_to_r_with_replicate(text):
         print(f"Erreur lors de l'envoi de la demande à Replicate: {e}")
         return None
 
+def copy_to_clipboard(text: str):
+    # Copy text to clipboard using `xclip`
+    process = subprocess.Popen(['xclip', '-selection', 'clipboard'], stdin=subprocess.PIPE)
+    process.communicate(input=text.encode('utf-8'))
+    
 def main():
     text_from_clipboard = get_clipboard()
     print(f"Texte récupéré du presse-papiers : {text_from_clipboard}")
@@ -37,7 +49,7 @@ def main():
     if translated_code:
         print("Code R généré par Replicate:")
         print(translated_code)
-        pyperclip.copy(translated_code)
+        copy_to_clipboard(translated_code)
         print("Code R copié de nouveau dans le presse-papiers.")
     else:
         print("Aucune réponse reçue ou erreur lors de la récupération de la réponse.")
