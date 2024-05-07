@@ -34,9 +34,9 @@ Pour installer le code python et les blibliothèqyes nécessaires, suivez les é
    pwd
    ```
 
-   Copiez ce chemin et ajoutez y "/Texte_correction.py" de manière à construire le chemin au code python qui nous sera utile plus tard. Cela devrait ressembler à cela :
+   Copiez ce chemin et ajoutez y "/te_correction.py" de manière à construire le chemin au code python qui nous sera utile plus tard. Cela devrait ressembler à cela :
    ```bash
-   /Users/nom_user/CorrectionAppScripts/Texte_correction.py
+   /Users/nom_user/CorrectionAppScripts/Natural_language_to_R.py
    ```
    Vous pouvez simplement le garder de coté, nous en aurons besoin par la suite.
 
@@ -129,13 +129,13 @@ Pour vous permettre d'exécuter facilement le script Python et donc d'avoir un r
 
 3. **Dans la barre de recherche à droite, tapez "Shell" et l'option "Exécuter un script Shell" apparaîtra. Sélectionnez-la.**
 
-4. **Dans la zone de texte du script Shell, supprimez le texte apparant s'il y en a un.**
+4. **Dans la zone de te du script Shell, supprimez le te apparant s'il y en a un.**
 
 5. **Entrez la commande Python pour exécuter votre script dans le script Shell**
    
    En remplaçant les chemins de l'environnement python et du script par ceux adaptés à vos chemins, a commande devrait ressembler à ceci :
    ```bash
-   /Users/nom_user/opt/anaconda3/bin/python3 /Users/nom_user/CorrectionAppScripts/Texte_correction.py
+   /Users/nom_user/opt/anaconda3/bin/python3 /Users/nom_user/CorrectionAppScripts/Natural_language_to_R.py
    ```
 
    Pour savoir quoi mettre à la place de /Users/nom_user/opt/anaconda3/bin/python3, lancez la commande   suivante sur votre terminal :
@@ -155,7 +155,7 @@ Pour vous permettre d'exécuter facilement le script Python et donc d'avoir un r
 
    Si vous êtes sur que votre clé fonctionne, tentez de modifier le script du shell dans le raccourci que vous avez créé comme suit :
    ```bash
-   REPLICATE_API_TOKEN='votre_clé_api' /Users/mateo/opt/anaconda3/bin/python3 /Users/mateo/CorrectionAppScripts/Texte_correction.py
+   REPLICATE_API_TOKEN='votre_clé_api' /Users/mateo/opt/anaconda3/bin/python3 /Users/mateo/CorrectionAppScripts/Natural_language_to_R.py
    ```
 
    Cela devrait maintenant fonctionne correctement.
