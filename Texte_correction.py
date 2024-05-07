@@ -1,7 +1,8 @@
 import os
 import replicate
 import pyperclip
-import re
+import re  # Ajout de la bibliothèque regex pour extraire le texte entre guillemets
+
 
 
 # Assurez-vous que la variable d'environnement est définie
@@ -26,8 +27,7 @@ def correct_text_with_replicate(text):
     }
     try:
         output = replicate.run("meta/meta-llama-3-70b-instruct", input=input)
-        response_text = "".join(output)
-        
+        response_text = "".join(output)  # Joindre les parties de la réponse
         # Extraire le texte corrigé entre guillemets
         corrected_text = re.findall(r'\"(.*?)\"', response_text)
         if corrected_text:
