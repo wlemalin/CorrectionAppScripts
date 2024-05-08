@@ -14,14 +14,14 @@ Pour installer le code Python et les bibliothèques nécessaires, suivez les ét
    
    Ouvrez un terminal et exécutez la commande suivante pour télécharger les fichiers nécessaires :
    ```bash
-   git clone https://github.com/wlemalin/Linux_NLR.git
+   git clone https://github.com/wlemalin/NL_to_code.git
    ```
    
 2. **Vérifier le téléchargement des documents**
 
    Pour vérifier que les documents sont présents (si la sortie n'est pas vide, c'est que tout va bien), exécutez les commandes suivantes dans le terminal :
    ```bash
-   cd Linux_NLR
+   cd NL_to_code
    ```
    Puis :
    ```bash
@@ -36,7 +36,7 @@ Pour installer le code Python et les bibliothèques nécessaires, suivez les ét
 
    Copiez ce chemin et ajoutez-y "/Natural_language_to_R.py" de manière à construire le chemin vers le code Python qui nous sera utile plus tard. Cela devrait ressembler à ceci :
    ```bash
-   /Users/nom_user/Linux_NLR/Natural_language_to_R.py
+   /Users/nom_user/NL_to_code/Natural_language_to_R.py
    ```
    Vous pouvez simplement le garder de côté, nous en aurons besoin par la suite.
 
