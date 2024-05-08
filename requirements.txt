@@ -1,3 +1,6 @@
 pandas==2.2.2
 pyperclip==1.8.2
 replicate==0.25.2
+
+# Linux-specific package
+xsel; sys_platform == 'linux'
