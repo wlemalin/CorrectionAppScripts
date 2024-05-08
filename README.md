@@ -48,24 +48,19 @@ Pour installer le code python et les blibliothèqyes nécessaires, suivez les é
    pip install -r requirements.txt
    ```
 
-5. **Installer xclip pour la gestion du presse-papiers**
+5. **Installer xsel pour la gestion du presse-papiers**
 
-   To install xclip on Ubuntu, Debian, and Linux Mint:
+   Pour installer xsel sur Ubuntu / Debian, exécutez la commande suivante dans le terminal:
    ```bash
    sudo apt update
-   sudo apt install xclip
+   sudo apt install xsel
+   ```
+
+   Pour vérifier que l'installation a réussi, exécutez la commande suivante dans le terminal::
+   ```bash
+   xsel --version
    ```
    
-   To install xclip on Fedora, CentOS, AlmaLinux, and Red Hat:
-   ```bash
-   sudo dnf install xclip
-   ```
-
-   To install xclip on Arch Linux and Manjaro:
-   ```bash
-   sudo pacman -S xclip
-   ```
-
 Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer la configuration.
 
 
