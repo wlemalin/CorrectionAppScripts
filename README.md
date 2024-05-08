@@ -1,5 +1,6 @@
-# Correcteur de texte Llama3 (système Unix ou Linux y compris macOS)
+# Outil de Transcription du Langage Naturel en Code R
 
+Ce programme permet de convertir des demandes en langage naturel en code R grâce à l'API de Replicate, utilisant le modèle LLaMA 3.
 Ce projet contient un script Python qui utilise llama-3 via l'API de Replicate pour écrire du code R sur la base d'instructions copiées dans le presse-papiers de l'utilisateur. Plus précisément ce fork résout un problème dû à la gestion du presse-papiers de Linux qui vide le presse-papier dès la fin de l'exécution du raccourci lorsque pyperclip est utilisé. 
 
 ## Prérequis
