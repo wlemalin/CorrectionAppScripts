@@ -14,7 +14,7 @@ Pour installer le code python et les blibliothèqyes nécessaires, suivez les é
    
    Ouvrez un terminal et exécutez la commande suivante pour téléchager les fichiers nécessaires :
    ```bash
-   git clone https://github.com/MateoDib/Natural_language_to_R.git
+   git clone https://github.com/wlemalin/Linux_NLR.git
    ```
    
 2. **Vérifier le téléchargement des documents**
