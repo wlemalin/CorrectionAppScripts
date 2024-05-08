@@ -8,20 +8,20 @@ Avant de commencer, assurez-vous d'avoir Python installé sur votre machine. Ce 
 
 ## Installation
 
-Pour installer le code python et les blibliothèqyes nécessaires, suivez les étapes ci-dessous :
+Pour installer le code Python et les bibliothèques nécessaires, suivez les étapes ci-dessous :
 
 1. **Cloner le dépôt**
    
-   Ouvrez un terminal et exécutez la commande suivante pour téléchager les fichiers nécessaires :
+   Ouvrez un terminal et exécutez la commande suivante pour télécharger les fichiers nécessaires :
    ```bash
    git clone https://github.com/wlemalin/Linux_NLR.git
    ```
    
 2. **Vérifier le téléchargement des documents**
 
-   Pour vérifier que les documents sont présents (si la sortie n'est pas vide c'est que tout va bien) exécutez les commandes suivantes dans le terminal :
+   Pour vérifier que les documents sont présents (si la sortie n'est pas vide, c'est que tout va bien), exécutez les commandes suivantes dans le terminal :
    ```bash
-   cd Natural_language_to_R
+   cd Linux_NLR
    ```
    Puis :
    ```bash
@@ -34,12 +34,11 @@ Pour installer le code python et les blibliothèqyes nécessaires, suivez les é
    pwd
    ```
 
-   Copiez ce chemin et ajoutez y "/Natural_language_to_R.py" de manière à construire le chemin au code python qui nous sera utile plus tard. Cela devrait ressembler à cela :
+   Copiez ce chemin et ajoutez-y "/Natural_language_to_R.py" de manière à construire le chemin vers le code Python qui nous sera utile plus tard. Cela devrait ressembler à ceci :
    ```bash
-   /Users/nom_user/Natural_language_to_R/Natural_language_to_R.py
+   /Users/nom_user/Linux_NLR/Natural_language_to_R.py
    ```
-   Vous pouvez simplement le garder de coté, nous en aurons besoin par la suite.
-
+   Vous pouvez simplement le garder de côté, nous en aurons besoin par la suite.
 
 4. **Installer les dépendances dans le dossier du projet**
 
@@ -48,6 +47,12 @@ Pour installer le code python et les blibliothèqyes nécessaires, suivez les é
    pip install -r requirements.txt
    ```
 
+5. **Installer `xsel` (pour les utilisateurs Linux uniquement)**
+
+   Si vous êtes sur Linux, installez `xsel` avec la commande suivante :
+   ```bash
+   sudo apt-get update && sudo apt-get install -y xsel
+   ```
 
 Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer la configuration.
 
