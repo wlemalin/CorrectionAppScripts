@@ -19,7 +19,7 @@ from clipboard_utils import get_clipboard, copy_to_clipboard
 from attachment_utils import initialise_file_pj, prepare_csv
 
 # If API-KEY problem, just paste yours below
-#os.environ['REPLICATE_API_TOKEN'] = ''
+os.environ['REPLICATE_API_TOKEN'] = ''
 
 # Assurez-vous que la variable d'environnement est définie
 REPLICATE_API_TOKEN = os.getenv('REPLICATE_API_TOKEN')
