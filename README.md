@@ -1,7 +1,6 @@
-# Outil de Transcription du Langage Naturel en Code R
+# Traducteur de Langage naturel en R avec Llama3 (système Unix ou Linux y compris macOS)
 
-Ce programme permet de convertir des demandes en langage naturel en code R grâce à l'API de Replicate, utilisant le modèle LLaMA 3.
-Ce projet contient un script Python qui utilise llama-3 via l'API de Replicate pour écrire du code R sur la base d'instructions copiées dans le presse-papiers de l'utilisateur. Plus précisément ce fork résout un problème dû à la gestion du presse-papiers de Linux qui vide le presse-papier dès la fin de l'exécution du raccourci lorsque pyperclip est utilisé. 
+Ce projet contient un script Python qui permet de traduire une demande en langage naturel en code directement via un raccourci.
 
 ## Prérequis
 
@@ -15,14 +14,14 @@ Pour installer le code python et les blibliothèqyes nécessaires, suivez les é
    
    Ouvrez un terminal et exécutez la commande suivante pour téléchager les fichiers nécessaires :
    ```bash
-   git clone https://github.com/wlemalin/Linux_NLR.git
+   git clone https://github.com/MateoDib/Natural_language_to_R.git
    ```
    
 2. **Vérifier le téléchargement des documents**
 
    Pour vérifier que les documents sont présents (si la sortie n'est pas vide c'est que tout va bien) exécutez les commandes suivantes dans le terminal :
    ```bash
-   cd Linux_NLR
+   cd Natural_language_to_R
    ```
    Puis :
    ```bash
@@ -37,7 +36,7 @@ Pour installer le code python et les blibliothèqyes nécessaires, suivez les é
 
    Copiez ce chemin et ajoutez y "/Natural_language_to_R.py" de manière à construire le chemin au code python qui nous sera utile plus tard. Cela devrait ressembler à cela :
    ```bash
-   /Users/nom_user/Linux_NLR/Natural_language_to_R.py
+   /Users/nom_user/Natural_language_to_R/Natural_language_to_R.py
    ```
    Vous pouvez simplement le garder de coté, nous en aurons besoin par la suite.
 
@@ -49,24 +48,12 @@ Pour installer le code python et les blibliothèqyes nécessaires, suivez les é
    pip install -r requirements.txt
    ```
 
-5. **Installer xsel pour la gestion du presse-papiers**
 
-   Pour installer xsel sur Ubuntu / Debian, exécutez la commande suivante dans le terminal:
-   ```bash
-   sudo apt update
-   sudo apt install xsel
-   ```
-
-   Pour vérifier que l'installation a réussi, exécutez la commande suivante dans le terminal::
-   ```bash
-   xsel --version
-   ```
-   
 Vous avez dorénavant téléchargé tout ce qu'il fallait. Vous pouvez continuer la configuration.
 
 
 
-## Configurer la clé API
+## Configurer la clé API (cette étape n'est pas nécessaire
 
    Configurez votre clé API en créant la variable d'environnement REPLICATE_API_TOKEN. Pour cela, il va falloir modifier votre fichier .bashrc ou .zshrc. La modification est ainsi "permanente", c'est-à-dire que vous aurez toujours accès à cette variable, jusqu'à modification/suppression.
 
@@ -130,6 +117,17 @@ Si la valeur de votre clé apparait, c'est que la variable d'environnement s'est
 En ajoutant cette ligne à votre fichier .bashrc ou .zshrc, vous configurez votre clé API pour être automatiquement disponible dans toutes les nouvelles sessions de terminal, ce qui facilite l'utilisation de scripts et d'outils nécessitant cette clé sans avoir à la configurer à chaque fois.
 
 
+## Si vous ne souhaitez pas définir la clé API en tant que variable d'environnement
+
+  Vous devrez simplement spécifier la clé API via la commande suivante lors de l'écriture du code dans le shell afin de créer le raccourci :
+  ```bash
+   REPLICATE_API_TOKEN='votre_clé_api' /Users/nom_user/votre_chemin_vers_environnement_python/python3 /Users/nom_user/Natural_language_to_R/Natural_language_to_R.py
+   ```
+   À la place du code suivant :
+   ```bash
+   /Users/nom_user/votre_chemin_vers_environnement_python/python3 /Users/nom_user/Natural_language_to_R/Natural_language_to_R.py
+   ```
+
 
 
 ## Créez un raccourci vers le script Python : 
@@ -142,16 +140,16 @@ Pour vous permettre d'exécuter facilement le script Python et donc d'avoir un r
 
 3. **Dans la barre de recherche à droite, tapez "Shell" et l'option "Exécuter un script Shell" apparaîtra. Sélectionnez-la.**
 
-4. **Dans la zone de te du script Shell, supprimez le te apparant s'il y en a un.**
+4. **Dans la zone de texte du script Shell, supprimez le texte apparant s'il y en a un.**
 
 5. **Entrez la commande Python pour exécuter votre script dans le script Shell**
    
    En remplaçant les chemins de l'environnement python et du script par ceux adaptés à vos chemins, a commande devrait ressembler à ceci :
    ```bash
-   /Users/nom_user/opt/anaconda3/bin/python3 /Users/nom_user/CorrectionAppScripts/Natural_language_to_R.py
+   /Users/nom_user/votre_chemin_vers_environnement_python/python3 /Users/nom_user/Natural_language_to_R/Natural_language_to_R.py
    ```
 
-   Pour savoir quoi mettre à la place de /Users/nom_user/opt/anaconda3/bin/python3, lancez la commande   suivante sur votre terminal :
+   Pour savoir quoi mettre à la place de /Users/nom_user/votre_chemin_vers_environnement_python/python3, lancez la commande   suivante sur votre terminal :
    ```bash
    which python3
    ```
@@ -166,23 +164,24 @@ Pour vous permettre d'exécuter facilement le script Python et donc d'avoir un r
 
 7. **Erreur de reconnaissance de la clé API?**
 
-   Si vous êtes sur que votre clé fonctionne, tentez de modifier le script du shell dans le raccourci que vous avez créé comme suit :
+   Si vous êtes sur que votre clé fonctionne mais qu'une erreur apparait lors du lancement du raccourci, tentez de modifier le script du shell dans le raccourci que vous avez créé comme suit :
    ```bash
-   REPLICATE_API_TOKEN='votre_clé_api' /Users/mateo/opt/anaconda3/bin/python3 /Users/mateo/CorrectionAppScripts/Natural_language_to_R.py
+   REPLICATE_API_TOKEN='votre_clé_api' /Users/nom_user/votre_chemin_vers_environnement_python/python3 /Users/nom_user/Natural_language_to_R/Natural_language_to_R.py
    ```
 
    Cela devrait maintenant fonctionne correctement.
 
-
 Voilà, vous pouvez maintenant copier un texte, cliquer sur votre raccourci, et coller le texte corrigé n'importe où.
+
+
 
 ## Mise à jour 
 
-Si vous avez déjà effectué toutes ces étapes auparavant mais que vous souhaitez simplement avoir la nouvelle version du repository, exécutez les commandes suivantes dans le terminal :
+Si vous avez déjà effectué toutes ces étapes auparavant mais que vous souhaitez simplement avoir la nouvelle versionne du repository, exécutez les commandes suivantes dans le terminal :
    ```bash
    # Veillez à remplacer le chemin par le votre
-   # Pour rappel vous pouvez connaître ce chemin simplement en exécutant "cd Linux_NLR"
-   cd /Users/nom_user/Linux_NLR
+   # Pour rappel vous pouvez connaître ce chemin simplement en exécutant "cd Natural_language_to_R"
+   cd /Users/nom_user/Natural_language_to_R
    ```
    Puis :
    ```bash
